@@ -1,14 +1,12 @@
-// Assignment Code
 var SpecialCharacters = ['@','!','#','$','%','^','&','*','<','?','+','~','_','-','/','|','{','}','[',']'];
-
 var numericCharacters = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-
 var lowercaseCharacters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u','v', 'w', 'x', 'y', 'z'];
-
 var uppercaseCharacters = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+// final array for password
+var finalPass = [];
 
-var characterSet = [];
 
+// Assignment Code
 characterSet.push(SpecialCharacters,numericCharacters,lowercaseCharacters,uppercaseCharacters);
 console.log(characterSet);
 
@@ -25,17 +23,10 @@ function writePassword() {
 }
 
 // Math.random(); 
-
 Math.random();
-
-
-
-
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
 
 function generatePassword() {
   // write and determing what my password should be
@@ -44,16 +35,36 @@ function generatePassword() {
 
   // if statement to determine lenght is between 8-128 characters
   var hasNumbers = confirm("Include Numbers?");
-  var haslowerCase = confirm ("Include lowercase")
-  var hasspecialCharacters = confirm("Include special characters");
-  var hasupperCase = confirm ("Include uppercase");
-  console.log(hasNumbers);
+  var haslowerCase = confirm ("Include lowercase?")
+  var hasspecialCharacters = confirm("Include special characters?");
+  var hasupperCase = confirm ("Include uppercase?");
+
+if (hasNumbers) {
+  finalPass.concat(SpecialCharacters);
+}
+
+console.log(finalPass);
+
+if (haslowerCase) {
+  finalPass.concat(haslowerCase);
+}
+
+console.log(finalPass);
+
+if (hasspecialCharacters){
+  finalPass.concat(hasspecialCharacters);
+}
+
+if (hasupperCase){
+  finalPass.concat(hasupperCase);
+}
 
 
 
-  console.log(passwordLength);
-
-  return "Pasword$1#"
+  return finalPass
 
 }
 
+else {
+  alert("Password must be between 8 and 128 characters")
+}
