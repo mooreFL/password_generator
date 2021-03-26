@@ -77,7 +77,6 @@ var uppercaseCharacters = [
   "Y",
   "Z",
 ];
-// final array for password
 
 // Assignment Code
 // characterSet.push(SpecialCharacters,numericCharacters,lowercaseCharacters,uppercaseCharacters);
@@ -106,6 +105,10 @@ function generatePassword() {
 
   var passwordLength = parseInt(prompt("Enter the length of your password"));
 // password length is less than 8 or greater than 128 do not run the functions 
+if (isNaN(passwordLength)) {
+  alert("Must be a number")
+}
+
 if (passwordLength < 8) {
     // return message
     alert("Please select length between 8 and 128 characters")
@@ -116,12 +119,20 @@ if (passwordLength < 8) {
     alert("Please select length between 8 and 128 characters")
     return
   }
+ 
 
-  // if statement to determine lenght is between 8-128 characters
+
+
+  // if statement to determine length is between 8-128 characters
   var hasNumbers = confirm("Include Numbers?");
   var haslowerCase = confirm("Include lowercase?");
   var hasspecialCharacters = confirm("Include special characters?");
   var hasupperCase = confirm("Include uppercase?");
+
+
+  if (!hasNumbers && !haslowerCase && !hasspecialCharacters && !hasupperCase) {
+    alert("Must choose at least one option")
+  }
 
   if (hasNumbers) {
     finalPass = finalPass.concat(numericCharacters);
@@ -148,6 +159,8 @@ if (passwordLength < 8) {
     randomPassword.push(randomCharacter);
     console.log(randomPassword)
   }
+
+
 
   return randomPassword.join("");
   
