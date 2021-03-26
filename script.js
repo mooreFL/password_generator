@@ -118,8 +118,7 @@ if (passwordLength < 8) {
     // return message
     alert("Please select length between 8 and 128 characters")
     return
-  }
- 
+  } 
 
 
 
