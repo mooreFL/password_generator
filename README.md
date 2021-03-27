@@ -12,3 +12,7 @@ The generator will create the password as defined by the user. I.e.: If user sel
 
 If the user chooses a length option outside of the 8-128 character limit the page will restart.
 
+link: https://moorefl.github.io/password_generator/
+
+
+
