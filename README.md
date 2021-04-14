@@ -16,7 +16,9 @@ If the user chooses a length option outside of the 8-128 character limit the pag
 
 link: https://moorefl.github.io/password_generator/
 
-
+<img src="assets\initialss.PNG">
+<img src="assets\firstprompt.PNG">
+<img src="assets\createdpassword.PNG">
 
 
 
