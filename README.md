@@ -1,5 +1,7 @@
 # password_generator
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A random password generator that creates a password that fits criteria selected by the user. 
 
 Must be between 8 and 128 characters, the user will be prompted and can select four seperate criteria that the password can include; 
@@ -13,6 +15,8 @@ The generator will create the password as defined by the user. I.e.: If user sel
 If the user chooses a length option outside of the 8-128 character limit the page will restart.
 
 link: https://moorefl.github.io/password_generator/
+
+
 
 
 
